@@ -50,10 +50,11 @@ public class MobileAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         if (holder instanceof MyViewHolder){
             MyViewHolder myViewHolder = (MyViewHolder) holder;
             SanPhamMoi sanPham = array.get(position);
-            myViewHolder.productName.setText(sanPham.getProduct_name());
+            myViewHolder.productName.setText(sanPham.getProduct_name().trim());
             DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
             myViewHolder.productPrice.setText("Giá: " + decimalFormat.format(Double.parseDouble(sanPham.getPrice()))+ "Đ");
-            myViewHolder.productDesc.setText(sanPham.getDesc());
+            myViewHolder.productDesc.setText(sanPham.getDescription());
+            //myViewHolder.productDesc.setText("Chua do data vao day duoc");
             Glide.with(context).load(sanPham.getImage()).into(myViewHolder.productImage);
             myViewHolder.setItemClickListener(new ItemClickListener() {
                 @Override
@@ -61,6 +62,7 @@ public class MobileAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     if (!isLongClick){
                         //click
                         Intent intent = new Intent(context, ProductDetailActivity.class);
+                        intent.putExtra("details", sanPham);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(intent);
                     }
@@ -93,7 +95,7 @@ public class MobileAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView productName, productPrice, productDesc, productId;
+        TextView productName, productPrice, productDesc;
         ImageView productImage;
         private ItemClickListener itemClickListener;
         public MyViewHolder(@NonNull View itemView) {

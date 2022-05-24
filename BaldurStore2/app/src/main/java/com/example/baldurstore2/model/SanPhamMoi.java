@@ -1,11 +1,13 @@
 package com.example.baldurstore2.model;
 
-public class SanPhamMoi {
+import java.io.Serializable;
+
+public class SanPhamMoi implements Serializable {
     int id;
     String product_name;
     String price;
     String image;
-    String desc;
+    String description;
     int type;
 
     public int getId() {
@@ -40,12 +42,12 @@ public class SanPhamMoi {
         this.image = image;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getType() {

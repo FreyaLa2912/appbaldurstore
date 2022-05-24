@@ -6,11 +6,13 @@
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/drawable/ic_launcher_background (1).xml" value="0.192" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/drawable/ic_localtion.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/layout/activity_cart.xml" value="0.17617753623188406" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/layout/activity_chi_tiet.xml" value="0.1" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/layout/activity_laptop.xml" value="0.33" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/layout/activity_mobile.xml" value="0.1" />
-        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/layout/activity_product_detail.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/layout/activity_product_detail.xml" value="0.25" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/layout/item_cart.xml" value="0.17617753623188406" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/layout/item_loading.xml" value="0.1" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/layout/item_mobile.xml" value="0.33" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/BaldurStore2/app/src/main/res/layout/item_new_product.xml" value="0.1" />
