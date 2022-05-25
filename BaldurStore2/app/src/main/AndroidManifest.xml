@@ -15,19 +15,16 @@
         android:theme="@style/Theme.BaldurStore2"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activity.CartActivity"
+            android:name=".activity.ReviewOrderActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ProductDetailActivity"
+            android:name=".activity.PaymentActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LaptopActivity"
+            android:name=".activity.ResetPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.MobileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,6 +32,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.CartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ProductDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.LaptopActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MobileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -97,6 +97,10 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(dienthoai);
                         dienthoai.putExtra("type", 1);
                         break;
+                    case 5:
+                        Intent donhang = new Intent(getApplicationContext(),ReviewOrderActivity.class);
+                        startActivity(donhang);
+                        break;
                 }
             }
         });
