@@ -44,6 +44,7 @@ public class ReviewOrderActivity extends AppCompatActivity {
                         donHangModel ->{
                             //OrderAdapter adapter = new OrderAdapter(getApplicationContext(),donHangModel.getResult());
                             //redonhang.setAdapter(adapter);
+
                             Toast.makeText(getApplicationContext(), "Truy cap thanh cong", Toast.LENGTH_SHORT).show();
                         },
                         throwable ->{

@@ -5,6 +5,11 @@ public class LoaiSp {
     String product_name;
     String image;
 
+    public LoaiSp(String product_name, String image) {
+        this.product_name = product_name;
+        this.image = image;
+    }
+
     public int getId() {
         return id;
     }

@@ -22,29 +22,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:title="Home">
-
-                <FrameLayout
-                    android:id="@+id/frameCart"
+                <LinearLayout
                     android:layout_gravity="right"
-                    android:layout_marginRight="9dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
+                    android:layout_height="?attr/actionBarSize"
+                    android:orientation="horizontal">
                     <ImageView
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/ic_shopping_cart_24"/>
+                        android:id="@+id/imgSearch"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_search_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize"/>
+                    <FrameLayout
+                        android:id="@+id/frameCart"
+                        android:layout_marginRight="9dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
 
-                    <com.nex3z.notificationbadge.NotificationBadge
-                        android:layout_marginTop="2dp"
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
-                        android:layout_gravity="top|right"
-                        android:id="@+id/menu_sl"/>
+                        <ImageView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_shopping_cart_24"/>
 
-                </FrameLayout>
+                        <com.nex3z.notificationbadge.NotificationBadge
+                            android:layout_marginTop="2dp"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="top|right"
+                            android:id="@+id/menu_sl"/>
+
+                    </FrameLayout>
+                </LinearLayout>
+
+
 
             </androidx.appcompat.widget.Toolbar>
 

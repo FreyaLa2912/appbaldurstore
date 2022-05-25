@@ -46,8 +46,8 @@ public class CartActivity extends AppCompatActivity {
 
     private void tinhTotals() {
         totalProduct = 0;
-        for (int i = 0; i < Utils.manggiohang.size(); i++){
-            totalProduct += (Utils.manggiohang.get(i).getGiasp() * Utils.manggiohang.get(i).getSoLuong());
+        for (int i = 0; i < Utils.mangmuahang.size(); i++){
+            totalProduct += (Utils.mangmuahang.get(i).getGiasp() * Utils.mangmuahang.get(i).getSoLuong());
         }
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         tongtien.setText(decimalFormat.format(totalProduct));
@@ -79,6 +79,7 @@ public class CartActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), PaymentActivity.class);
                 intent.putExtra("tongtien", totalProduct);
+                Utils.manggiohang.clear();
                 startActivity(intent);
             }
         });

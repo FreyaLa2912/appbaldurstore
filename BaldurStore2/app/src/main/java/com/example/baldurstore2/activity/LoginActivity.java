@@ -76,9 +76,11 @@ public class LoginActivity extends AppCompatActivity {
                             .subscribe(
                                     userModel ->{
                                         if(userModel.isSuccess()){
-                                            //isLogin = true;
-                                            //Paper.book().write("isLogin", isLogin);
+                                            isLogin = true;
+                                            Paper.book().write("isLogin", isLogin);
                                             Utils.user_current = userModel.getResult().get(0);
+                                            //Luu lai thong tin nguoi dung
+                                            Paper.book().write("user", userModel.getResult().get(0));
                                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                             startActivity(intent);
                                             Toast.makeText(getApplicationContext(),"Dang nhap thanh cong", Toast.LENGTH_SHORT).show();

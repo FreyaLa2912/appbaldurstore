@@ -29,6 +29,7 @@ import com.example.baldurstore2.adapter.LoaiSpAdapter;
 import com.example.baldurstore2.adapter.SanPhamMoiAdapter;
 import com.example.baldurstore2.model.LoaiSp;
 import com.example.baldurstore2.model.SanPhamMoi;
+import com.example.baldurstore2.model.User;
 import com.example.baldurstore2.retrofit.ApiBanHang;
 import com.example.baldurstore2.retrofit.RetrofitClient;
 import com.example.baldurstore2.utils.Utils;
@@ -38,6 +39,7 @@ import com.nex3z.notificationbadge.NotificationBadge;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.paperdb.Paper;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     SanPhamMoiAdapter spAdapter;
     NotificationBadge badge;
     FrameLayout frameLayout;
+    ImageView imgSearch;
 
 
     @Override
@@ -65,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         apiBanHang = RetrofitClient.getInstance(Utils.BASE_URL).create(ApiBanHang.class);
 
+        Paper.init(this);
+        if (Paper.book().read("user") != null){
+            User user = Paper.book().read("user");
+            Utils.user_current = user;
+        }
         Anhxa();
         ActionBar();
 
@@ -101,6 +109,13 @@ public class MainActivity extends AppCompatActivity {
                         Intent donhang = new Intent(getApplicationContext(),ReviewOrderActivity.class);
                         startActivity(donhang);
                         break;
+                    case 6:
+                        //xoa key user
+                        Paper.book().delete("user");
+                        Intent dangnhap = new Intent(getApplicationContext(),LoginActivity.class);
+                        startActivity(dangnhap);
+                        finish();
+                        break;
                 }
             }
         });
@@ -133,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
            loaiSpModel -> {
                if (loaiSpModel.isSuccess()){
                     mangLoaiSp = loaiSpModel.getResult();
+                    mangLoaiSp.add(new LoaiSp("Đăng xuất","https://ngochieu.name.vn/img/info.png"));
                    //tao adapter
                    loaiSpAdapter = new LoaiSpAdapter(getApplicationContext(), mangLoaiSp);
                    listViewMainScreen.setAdapter(loaiSpAdapter);
@@ -174,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Anhxa() {
+        imgSearch = findViewById(R.id.imgSearch);
         toolbar = findViewById(R.id.toolBarHomeScreen);
         viewFlipper = findViewById(R.id.viewFlipper);
         recyclerViewMainScreen = findViewById(R.id.recycleview);
@@ -204,6 +221,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent cart = new Intent(getApplicationContext(), CartActivity.class);
                 startActivity(cart);
+            }
+        });
+
+        imgSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                startActivity(intent);
             }
         });
 
