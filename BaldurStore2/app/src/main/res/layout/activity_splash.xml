@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     android:rotationX="14"
     tools:context=".activity.SplashActivity">
+    <ImageView
+        android:src="@drawable/community_w512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/splashText"
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
 
     //Tran oi nho them thu vien implementation 'com.airbnb.android:lottie:$lottieVersion' vao nhe!!
 

@@ -145,6 +145,16 @@
         </com.google.android.material.textfield.TextInputEditText>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:src="@drawable/debit_card_w512"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOrder"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnOrder"
         app:layout_constraintBottom_toBottomOf="parent"

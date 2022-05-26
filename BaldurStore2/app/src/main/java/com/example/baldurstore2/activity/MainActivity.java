@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(trangchu);
                         break;
                     case 1:
-                        Intent laptop = new Intent(getApplicationContext(), MobileActivity.class); //sua lai sau
+                        Intent laptop = new Intent(getApplicationContext(), LaptopActivity.class); //sua lai sau
                         laptop.putExtra("type", 2);
                         startActivity(laptop);
                         break;

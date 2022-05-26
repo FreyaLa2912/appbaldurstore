@@ -12,12 +12,13 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
             android:id="@+id/itemPhone_product_image"
-            android:src="@drawable/new_icon_w512"
-            android:layout_weight="3"
             android:layout_width="0dp"
-            android:layout_height="100dp"/>
+            android:layout_height="118dp"
+            android:layout_weight="3"
+            android:src="@drawable/new_icon_w512" />
 
         <LinearLayout
             android:orientation="vertical"

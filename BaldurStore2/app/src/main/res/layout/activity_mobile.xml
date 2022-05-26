@@ -10,7 +10,8 @@
         android:id="@+id/toolBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#B2B4C1"
+        android:background="#1A94FF"
+        app:titleTextColor="#fff"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Phone"></androidx.appcompat.widget.Toolbar>
 

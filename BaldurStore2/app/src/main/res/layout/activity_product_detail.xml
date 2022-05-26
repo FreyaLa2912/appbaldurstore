@@ -10,7 +10,8 @@
         android:id="@+id/toolBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#3AD541"
+        android:background="#1A94FF"
+        app:titleTextColor="#fff"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Product details">
         <FrameLayout
@@ -106,7 +107,7 @@
         <TextView
             android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
-            android:textSize="18sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:text="Product descriptions:"
             android:layout_width="match_parent"
@@ -124,7 +125,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:textSize="10sp"
+                android:textSize="20sp"
                 android:text="This product is very bad, so you shoulden't buy it, I recommend for you that thing!"
                 android:textStyle="bold" />
         </ScrollView>
