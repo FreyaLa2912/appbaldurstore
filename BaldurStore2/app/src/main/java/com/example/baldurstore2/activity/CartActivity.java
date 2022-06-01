@@ -43,7 +43,7 @@ public class CartActivity extends AppCompatActivity {
         initControl();
         tinhTotals();
     }
-
+    //Tinh tong tien
     private void tinhTotals() {
         totalProduct = 0;
         for (int i = 0; i < Utils.mangmuahang.size(); i++){
